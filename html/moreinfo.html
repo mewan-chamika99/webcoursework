@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <style>
+        body,
+        html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100vh;
+            font-family: sans-serif;
+        }
+        
+        .section_top {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            background-image: url(p7.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            justify-content: center;
+            animation: change 30s infinite ease-in-out;
+        }
+        
+        .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-transform: uppercase;
+        }
+        
+        .content a {
+            background: white;
+            padding: 10px 24px;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 20px;
+        }
+        
+        .content a:hover {
+            backgroud: blue;
+            color: white;
+        }
+        
+        @keyframes change {
+            0% {
+                background-image: url(p9.jpg);
+            }
+            20% {
+                background-image: url(p11.jpg);
+            }
+            40% {
+                background-image: url(p7.jpg);
+            }
+            80% {
+                background-image: url(p1.jpg);
+            }
+            0% {
+                background-image: url(p5.png);
+            }
+        }
+        
+        lock;
+        color: black;
+        * {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .top {
+            overflow: hidden;
+            background-color: #e9e9e9;
+        }
+        
+        .top a {
+            float: left;
+            display: b text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .top a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .top a.active {
+            background-color: #2196F3;
+            color: white;
+        }
+        
+        .top input[type=text] {
+            float: right;
+            padding: 6px;
+            margin-top: 8px;
+            margin-right: 16px;
+            border: none;
+            font-size: 17px;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .topnav a,
+            .topnav input[type=text] {
+                float: none;
+                display: block;
+                text-align: left;
+                width: 100%;
+                margin: 0;
+                padding: 14px;
+            }
+            .top input[type=text] {
+                border: 1px solid #ccc;
+            }
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            backgroud: white;
+        }
+        
+        footer {
+            background: black;
+            height: auto;
+            width: 100vw;
+            font-family: "open sans";
+            padding-top: 40px;
+            color: white;
+        }
+        
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .footer-content h3 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-decoration: capitalize;
+            line-height: 3rem;
+        }
+        
+        .fotter-content p {
+            max-width: 500px;
+            margin: 10px;
+            line-height: 28px;
+            font-size: 14px;
+        }
+        
+        .socials {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0 3rem 0;
+        }
+        
+        .socials li {
+            margin: 0 10px;
+        }
+        
+        .socials a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .socials a i {
+            font-size: 1.1rem;
+            transition: color .4s ease;
+        }
+        
+        .socials a:hover i {
+            color: aqua;
+        }
+        
+        .footer-bottom {
+            background: black;
+            width: 100vw;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            min-height: 100vh;
+            background: #0c192c;
+        }
+        
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .bubbles {
+            position: relative;
+            display: flex;
+        }
+        
+        .bubbles span {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            background: #4fc3dc;
+            margin: 0 4px;
+            border-radius: 50%;
+            box-shadow: 0 0 0 10px #4fc3dc, 0 0 50px #4fc3dc, 0 0 100px #4fc3dc;
+            animation: animate 15s linear infinite;
+            animation-duration: calc(120s/var(--i));
+        }
+        
+        .bubbles span:nth-child(even) {
+            background: #ff2d75;
+            box-shadow: 0 0 0 10px #ff2d7544, 0 0 50px #ff2d75, 0 0 100px #ff2d75;
+        }
+        
+        @keyframes animate {
+            0% {
+                transform: translateY(100vh) scale(0);
+            }
+            100% {
+                transform: translateY(-10vh) scale(1);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="top">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About</a>
+        <a href="sdg.html">sdg13</a>
+        <a href="signup.html">signup</a>
+        <a class="active" href="moreinfo.html">moreinfo</a>
+        <input type="text" placeholder="Search..">
+        <br>
+        <br>
+        <img src="../image/s17.png" height="400px">
+
+        <center><br><br> we all know climate change is a real and undeniable thread to our entire civilization the effects are already visible and will be catsastrophic unless we act now. through education innovation and adherence to our climate commitment we
+            can make the necessary changes to protect the planetthese changes also provide huge opportunities to modernize our infrastructure which will create will create new jobs and promote greater prosperity across the globe.
+
+            <br> there are few goals of climate change adaptation are to reduce risk and vulnerability to climate change,strengthen resilience,enhance well being and the capacity to anticipate, and respond successfully to change.
+            <br> The annual average economic losses from climate-related disasters are in the hundreds of billions of dollars. This is not to mention the human impact of geo-physical disasters, which are 91 percent climate-related, and which between 1998
+            and 2017 killed 1.3 million people, and left 4.4 billion injured. The goal aims to mobilize US$100 billion annually by 2020 to address the needs of developing countries to both adapt to climate change and invest in low-carbon development.
+            Supporting vulnerable regions will directly contribute not only to Goal 13 but also to the other SDGs. These actions must also go hand in hand with efforts to integrate disaster risk measures, sustainable natural resource management, and human
+            security into national development strategies. It is still possible, with strong political will, increased investment, and using existing technology, to limit the increase in global mean temperature to two degrees Celsius above pre-industrial
+            levels, aiming at 1.5°C, but this requires urgent and ambitious collective action.
+            <br>
+            <br>
+            <br>
+            <br>
+
+
+            <br>Climate change presents the single biggest threat to development, and its widespread, unprecedented impacts disproportionately burden the poorest and most vulnerable. Urgent action to combat climate change and minimize its disruptions
+            is integral to the successful implementation of the Sustainable Development Goals. WITH THIS ALL FACTS WE CAN VIVIDLY SEE HOW THIS WEBSITE GIVES US A SIMPLE EXPLANATION ABOUT SDG 13 AND HOW IT HELPS TO ACHIEVE THE GOALS.
+            <h2>
+                FOR MORE INFORMATION VISIT THIS WEBSITES
+            </h2>
+
+
+
+
+
+            <br>
+
+
+
+
+        </center>
+        <ol>
+            <li> "https://sdgs.un.org/goals/goal13"</li>
+            <li> "https://worldtop20.org/"</li>
+            <li>" http://www.undp.org/"</li>
+        </ol>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container">
+            <div class="bubbles">
+                <span style="--i:11;"></span>
+                <span style="--i:12;"></span>
+                <span style="--i:24;"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:14;"></span>
+                <span style="--i:23;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:16;"></span>
+                <span style="--i:19;"></span>
+                <span style="--i:20;"></span>
+                <span style="--i:22;"></span>
+                <span style="--i:25;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:21;"></span>
+                <span style="--i:15;"></span>
+                <span style="--i:23;"></span>
+                <span style="--i:26;"></span>
+                <span style="--i:17;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:28;"></span>
+                <span style="--i:11;"></span>
+                <span style="--i:12;"></span>
+                <span style="--i:24;"></span>
+                <span style="--i:10;"></span>
+                <span style="--i:14;"></span>
+                <span style="--i:23;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:16;"></span>
+                <span style="--i:19;"></span>
+                <span style="--i:20;"></span>
+                <span style="--i:22;"></span>
+                <span style="--i:25;"></span>
+                <span style="--i:18;"></span>
+                <span style="--i:21;"></span>
+                <span style="--i:15;"></span>
+                <span style="--i:23;"></span>
+                <span style="--i:26;"></span>
+                <span style="--i:17;"></span>
+                <span style="--i:13;"></span>
+                <span style="--i:28;"></span>
+
+
+            </div>
+
+        </div>
+        <footer>
+            <div class="footer-content">
+                <h3>SDG 13</h3>
+                <p>take urgent action to combat climate change and its impacts</p>
+                <ul class="socials">
+                    <li><a href="# "><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin-squre"></i></a></li>
+
+                </ul>
+                <img src="../image/footer2.jpg" width="200px" height="80px">
+                <img src="../image/footer33.png" width="200px" height="150p">
+
+
+            </div>
+            <div class="footer-bottom">
+                <p>copyright &copy;2022 .designed by<span>mewan abesinghe</span></p>
+            </div>
+        </footer>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
